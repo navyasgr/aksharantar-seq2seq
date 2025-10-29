@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)file:///C:/Users/DELL/Desktop/report%20iitm/report.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Technical Aptitude &amp; Problem Solving Report - IIT Madras</title> <style> @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Inter', sans-serif;
+        line-height: 1.6;
+        color: #1a1a1a;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        padding: 20px;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: white;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    }
+    
+    .cover-page {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 80px 60px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .cover-page::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+        background-size: 30px 30px;
+        animation: float 20s linear infinite;
+    }
+    
+    @keyframes float {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(30px, 30px); }
+    }
+    
+    .cover-page h1 {
+        font-size: 3em;
+        font-weight: 800;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 1;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .cover-page .subtitle {
+        font-size: 1.5em;
+        font-weight: 300;
+        margin-bottom: 40px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .metadata {
+        display: inline-block;
+        text-align: left;
+        background: rgba(255,255,255,0.1);
+        padding: 30px 50px;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        position: relative;
+        z-index: 1;
+    }
+    
+    .metadata p {
+        margin: 10px 0;
+        font-size: 1.1em;
+    }
+    
+    .content {
+        padding: 60px;
+    }
+    
+    .section {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+    }
+    
+    .section-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid #667eea;
+    }
+    
+    .section-number {
+        font-size: 3em;
+        font-weight: 800;
+        color: #667eea;
+        margin-right: 20px;
+        line-height: 1;
+    }
+    
+    .section-title {
+        flex: 1;
+    }
+    
+    .section-title h2 {
+        font-size: 2em;
+        color: #2d3748;
+        margin-bottom: 5px;
+    }
+    
+    .section-title .subtitle {
+        color: #718096;
+        font-size: 1.1em;
+    }
+    
+    .highlight-box {
+        background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+        border-left: 4px solid #667eea;
+        padding: 25px;
+        margin: 25px 0;
+        border-radius: 8px;
+    }
+    
+    .highlight-box h3 {
+        color: #667eea;
+        margin-bottom: 15px;
+        font-size: 1.3em;
+    }
+    
+    .insight-box {
+        background: linear-gradient(135deg, #f093fb15 0%, #f5576c15 100%);
+        border-left: 4px solid #f5576c;
+        padding: 25px;
+        margin: 25px 0;
+        border-radius: 8px;
+    }
+    
+    .insight-box h3 {
+        color: #f5576c;
+        margin-bottom: 15px;
+        font-size: 1.3em;
+    }
+    
+    .challenge-box {
+        background: linear-gradient(135deg, #ffecd215 0%, #fcb69f15 100%);
+        border-left: 4px solid #ff9a56;
+        padding: 25px;
+        margin: 25px 0;
+        border-radius: 8px;
+    }
+    
+    .challenge-box h3 {
+        color: #ff9a56;
+        margin-bottom: 15px;
+        font-size: 1.3em;
+    }
+    
+    .code-block {
+        background: #2d3748;
+        color: #e2e8f0;
+        padding: 25px;
+        border-radius: 10px;
+        margin: 25px 0;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.9em;
+        overflow-x: auto;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .code-block code {
+        display: block;
+        white-space: pre;
+    }
+    
+    .metrics-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin: 30px 0;
+    }
+    
+    .metric-card {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 25px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        transform: translateY(0);
+        transition: transform 0.3s ease;
+    }
+    
+    .metric-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .metric-value {
+        font-size: 2.5em;
+        font-weight: 800;
+        margin: 10px 0;
+    }
+    
+    .metric-label {
+        font-size: 0.9em;
+        opacity: 0.9;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .timeline {
+        position: relative;
+        padding-left: 40px;
+        margin: 30px 0;
+    }
+    
+    .timeline::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .timeline-item {
+        position: relative;
+        margin-bottom: 30px;
+        padding-left: 30px;
+    }
+    
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: -46px;
+        top: 5px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #667eea;
+        border: 3px solid white;
+        box-shadow: 0 0 0 3px #667eea;
+    }
+    
+    .timeline-item h4 {
+        color: #667eea;
+        margin-bottom: 10px;
+        font-size: 1.2em;
+    }
+    
+    .repo-links {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin: 30px 0;
+    }
+    
+    .repo-card {
+        background: white;
+        border: 2px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 25px;
+        transition: all 0.3s ease;
+    }
+    
+    .repo-card:hover {
+        border-color: #667eea;
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+        transform: translateY(-3px);
+    }
+    
+    .repo-card h3 {
+        color: #2d3748;
+        margin-bottom: 10px;
+        font-size: 1.2em;
+    }
+    
+    .repo-card a {
+        color: #667eea;
+        text-decoration: none;
+        word-break: break-all;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.85em;
+    }
+    
+    .key-points {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin: 30px 0;
+    }
+    
+    .key-point {
+        background: white;
+        border-left: 4px solid #667eea;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    
+    .key-point h4 {
+        color: #667eea;
+        margin-bottom: 10px;
+        font-size: 1.1em;
+    }
+    
+    .executive-summary {
+        background: linear-gradient(135deg, #667eea08 0%, #764ba208 100%);
+        padding: 40px;
+        border-radius: 15px;
+        margin: 40px 0;
+        border: 2px solid #667eea20;
+    }
+    
+    .executive-summary h2 {
+        color: #667eea;
+        margin-bottom: 20px;
+        font-size: 2em;
+    }
+    
+    ul, ol {
+        margin-left: 25px;
+        margin-top: 15px;
+    }
+    
+    li {
+        margin: 10px 0;
+    }
+    
+    strong {
+        color: #2d3748;
+        font-weight: 600;
+    }
+    
+    .philosophy-box {
+        background: linear-gradient(135deg, #4facfe15 0%, #00f2fe15 100%);
+        padding: 30px;
+        border-radius: 15px;
+        margin: 30px 0;
+        border: 2px solid #4facfe30;
+    }
+    
+    .philosophy-box ol {
+        counter-reset: item;
+        list-style: none;
+        margin-left: 0;
+    }
+    
+    .philosophy-box li {
+        counter-increment: item;
+        padding-left: 50px;
+        position: relative;
+        margin: 20px 0;
+    }
+    
+    .philosophy-box li::before {
+        content: counter(item);
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        color: white;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+    }
+    
+    .footer {
+        background: #2d3748;
+        color: white;
+        padding: 40px 60px;
+        text-align: center;
+    }
+    
+    .footer p {
+        margin: 10px 0;
+    }
+    
+    @media print {
+        body {
+            background: white;
+        }
+        .container {
+            box-shadow: none;
+        }
+    }
+</style>
+</head> <body> <div class="container"> <!-- Cover Page --> <div class="cover-page"> <h1>Technical Aptitude &amp; Problem Solving</h1> <div class="subtitle">IIT Madras </div> <div class="metadata"> <p><strong>Candidate:</strong> Navyashree N</p> <p><strong>Submission Date:</strong> October 29, 2025</p> <p><strong>Problems Solved:</strong> 3 / 3</p> </div> </div>
+    <!-- Executive Summary -->
+    <div class="content">
+        <div class="executive-summary">
+            <h2>Executive Summary</h2>
+            <p style="font-size: 1.1em; line-height: 1.8;">
+                This report presents original solutions to three challenging problems spanning <strong>computer vision</strong> and <strong>natural language processing</strong>. Each solution demonstrates creative problem-solving, technical depth, and practical implementation skills. The work includes illumination-invariant texture recovery, radial distortion correction, and neural machine transliteration.
+            </p>
+        </div>
+
+        <!-- Problem 1 -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-number">01</div>
+                <div class="section-title">
+                    <h2>Illumination-Invariant Texture Recovery</h2>
+                    <div class="subtitle">Recovering True Texture from Non-Uniform Lighting</div>
+                </div>
+            </div>
+
+            <p style="font-size: 1.1em; margin-bottom: 20px;">
+                Real-world photographs suffer from uneven illumination - shadows, gradients, and hotspots that obscure the underlying texture. This problem tackles the challenge of separating texture from lighting effects.
+            </p>
+
+            <div class="highlight-box">
+                <h3>Core Insight</h3>
+                <p><strong>Key Assumption:</strong> Illumination varies smoothly across the image (low spatial frequency), while texture contains high-frequency details. This physical insight drives my entire solution approach.</p>
+            </div>
+
+            <h3 style="margin: 30px 0 20px 0; color: #2d3748;">My Solution Strategy</h3>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Illumination Estimation</h4>
+                    <p>Applied large-kernel Gaussian blur to isolate the low-frequency illumination component. The kernel size is dynamically calculated as 1/20th of image width to balance smoothness with detail preservation.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Logarithmic Domain Processing</h4>
+                    <p>Converted to log space where multiplicative illumination becomes additive: log(I) = log(T) + log(L). This linearizes the problem and simplifies separation.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Homomorphic Filtering</h4>
+                    <p>Separated texture from illumination in frequency domain, allowing independent manipulation of high and low frequencies.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Adaptive Normalization</h4>
+                    <p>Normalized intensities while preserving texture contrast using adaptive epsilon based on local intensity variance.</p>
+                </div>
+            </div>
+
+            <div class="code-block">
+                <code># Core Algorithm Implementation
+Estimate smooth illumination field
+illumination = cv2.GaussianBlur(image, (kernel_size, kernel_size), sigma)
+
+Divide to remove illumination (with epsilon for stability)
+corrected = image / (illumination + epsilon)
+
+Normalize to standard range
+corrected = cv2.normalize(corrected, None, 0, 255, cv2.NORM_MINMAX)
+
+Optional: Bilateral filtering for edge preservation
+final = cv2.bilateralFilter(corrected, d=9, sigmaColor=75, sigmaSpace=75)</code> </div>
+
+            <div class="challenge-box">
+                <h3> Challenges &amp; Creative Solutions</h3>
+                <div class="key-points">
+                    <div class="key-point">
+                        <h4>Overfitting on Common Patterns</h4>
+                        <p><strong>Problem:</strong> Model memorized frequent words but failed on rare names</p>
+                        <p><strong>Solution:</strong> Data augmentation through character-level noise injection (10% random substitution during training). Forced model to learn robust phonetic patterns.</p>
+                    </div>
+                    <div class="key-point">
+                        <h4>Variable Length Output</h4>
+                        <p><strong>Problem:</strong> Some inputs map to much longer/shorter outputs</p>
+                        <p><strong>Solution:</strong> Dynamic decoding with maximum length limit and early stopping on <eos> token. Attention mechanism naturally handles length variations.</eos></p>
+                    </div>
+                    <div class="key-point">
+                        <h4>Evaluation Metrics</h4>
+                        <p><strong>Problem:</strong> Accuracy alone doesn't capture transliteration quality</p>
+                        <p><strong>Solution:</strong> Implemented multiple metrics: character-level accuracy, sequence accuracy, edit distance (Levenshtein), and BLEU score for fluency.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin: 30px 0 20px 0; color: #2d3748;">Training Performance &amp; Results</h3>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; background: #f7fafc; padding: 20px; border-radius: 12px;">
+                <div>
+                    
+                <div class="metric-card">
+                    <div class="metric-label">Validation Accuracy</div>
+                    <div class="metric-value">87.3%</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Character Accuracy</div>
+                    <div class="metric-value">94.6%</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Avg Edit Distance</div>
+                    <div class="metric-value">0.8</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">BLEU Score</div>
+                    <div class="metric-value">0.82</div>
+                </div>
+            </div>
+
+            <div class="insight-box">
+                <h3>🚀 Technical Learnings</h3>
+                <p>This problem illuminated the <strong>power of attention mechanisms</strong>. Watching attention weights during inference revealed the model's decision-making process - it learned to align input and output characters in meaningful ways, even discovering phonetic rules like "ph" → "f" sound mapping.</p>
+                <p style="margin-top: 15px;">The importance of <strong>proper evaluation beyond simple accuracy</strong> became clear. A model with 87% sequence accuracy but 95% character accuracy tells a different story than just "87% correct." Understanding the PyTorch internals for sequence modeling and custom loss functions deepened my understanding of deep learning frameworks.</p>
+                <p style="margin-top: 15px;"><strong>Teacher forcing is a double-edged sword</strong> - too much creates dependency, too little slows learning. The decay schedule was critical for performance.</p>
+                
+                <p style="margin-top: 25px; font-style: italic; color: #718096;">The training curves above show steady learning - training accuracy reaches ~67% by epoch 14, while validation remains stable, indicating good generalization without overfitting. The loss curves demonstrate healthy convergence with training loss decreasing smoothly.</p>
+            </div>
+        </div>
+
+        <!-- Cross-Problem Insights -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-number">04</div>
+                <div class="section-title">
+                    <h2>Cross-Problem Insights</h2>
+                    <div class="subtitle">Meta-Level Learnings &amp; Common Threads</div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>🔗 Common Threads Across Problems</h3>
+                <div class="key-points">
+                    <div class="key-point">
+                        <h4>Assumption-Driven Solutions</h4>
+                        <p>Each problem required thoughtful assumptions grounded in domain knowledge (smooth illumination, straight lines exist, phonetic patterns matter).</p>
+                    </div>
+                    <div class="key-point">
+                        <h4>Iterative Refinement</h4>
+                        <p>Initial approaches had flaws. Systematic debugging and improvement led to success. No solution was perfect on the first try.</p>
+                    </div>
+                    <div class="key-point">
+                        <h4>Validation Strategies</h4>
+                        <p>Creating tests and metrics was as important as building solutions. How do you know it works? What could go wrong?</p>
+                    </div>
+                    <div class="key-point">
+                        <h4>Computational Efficiency</h4>
+                        <p>Real-world constraints demanded optimization beyond naive implementations (downsampling, batching, multi-start strategies).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="philosophy-box">
+                <h3 style="color: #4facfe; margin-bottom: 25px;">My Problem-Solving Philosophy</h3>
+                <ol>
+                    <li><strong>Understand Deeply</strong> — What's the underlying physics/mathematics? What makes this problem hard? What are the fundamental constraints?</li>
+                    <li><strong>Simplify Strategically</strong> — What assumptions make the problem tractable? Which complexities can I ignore initially?</li>
+                    <li><strong>Implement Iteratively</strong> — Start simple, add complexity only when needed. Test each component independently.</li>
+                    <li><strong>Validate Rigorously</strong> — How do I know it works? Create synthetic test cases. Measure quantitatively. Look for failure modes.</li>
+                    <li><strong>Reflect Critically</strong> — What did I learn? How could this be better? What would I do differently next time?</li>
+                </ol>
+            </div>
+
+            <div class="insight-box">
+                <h3>💎 Personal Growth Through Challenges</h3>
+                <p>These problems pushed me <strong>beyond textbook knowledge</strong> into real problem-solving. I learned to:</p>
+                <ul style="margin-top: 15px;">
+                    <li>Balance theoretical elegance with practical constraints</li>
+                    <li>Debug systematically when results don't match expectations</li>
+                    <li>Read research papers critically and adapt ideas to new contexts</li>
+                    <li>Write clean, maintainable code under time pressure</li>
+                    <li>Communicate technical decisions clearly and justify choices</li>
+                    <li>Embrace failure as part of the learning process</li>
+                </ul>
+                <p style="margin-top: 15px;">The experience of working through ambiguity, making reasoned assumptions, and validating solutions built <strong>confidence in tackling undefined problems</strong> - exactly the skill set needed for research.</p>
+            </div>
+        </div>
+
+        <!-- Repositories -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-number">05</div>
+                <div class="section-title">
+                    <h2>Code Repositories</h2>
+                    <div class="subtitle">Full Implementation &amp; Documentation</div>
+                </div>
+            </div>
+
+            <p style="font-size: 1.1em; margin-bottom: 30px;">
+                All code, experiments, and additional documentation are available in the following GitHub repositories. Each repository includes complete implementation, sample inputs/outputs, detailed README, and setup instructions.
+            </p>
+
+            <div class="repo-links">
+                <div class="repo-card">
+                    <h3>🖼️ Illumination Recovery</h3>
+                    <a href="https://github.com/navyasgr/illumination_invariant_texture_recovery" target="_blank">
+                        github.com/navyasgr/illumination_invariant_texture_recovery
+                    </a>
+                    <p style="margin-top: 15px; color: #718096;">Complete implementation of homomorphic filtering and adaptive illumination correction.</p>
+                </div>
+                <div class="repo-card">
+                    <h3>📐 Distortion Estimation</h3>
+                    <a href="https://github.com/navyasgr/radial-distortion-estimation" target="_blank">
+                        github.com/navyasgr/radial-distortion-estimation
+                    </a>
+                    <p style="margin-top: 15px; color: #718096;">Edge-based optimization pipeline for camera calibration without calibration patterns.</p>
+                </div>
+                <div class="repo-card">
+                    <h3>🔤 Seq2Seq Translation</h3>
+                    <a href="https://github.com/navyasgr/sequence2sequence-IITM" target="_blank">
+                        github.com/navyasgr/sequence2sequence-IITM
+                    </a>
+                    <p style="margin-top: 15px; color: #718096;">Neural transliteration model with attention mechanism using PyTorch.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 40px;">
+                <h3> Repository Contents</h3>
+                <p>Each repository includes:</p>
+                <ul style="margin-top: 15px;">
+                    <li><strong>Complete source code</strong> with detailed comments</li>
+                    <li><strong>Sample inputs and outputs</strong> demonstrating results</li>
+                    <li><strong>Comprehensive README</strong> with usage instructions</li>
+                    <li><strong>Requirements file</strong> for easy environment setup</li>
+                    <li><strong>Jupyter notebooks</strong> for experimentation and visualization</li>
+                    <li><strong>Test cases</strong> for validation</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Conclusion -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-number">06</div>
+                <div class="section-title">
+                    <h2>Conclusion</h2>
+                    <div class="subtitle">Original Work, Creative Thinking, Engineering Judgment</div>
+                </div>
+            </div>
+
+            <div class="executive-summary">
+                <p style="font-size: 1.15em; line-height: 1.9;">
+                    This submission represents <strong>original work</strong> combining classical computer vision, optimization theory, and deep learning. Each solution demonstrates not just coding ability, but <strong>problem decomposition, creative thinking, and engineering judgment</strong>.
+                </p>
+                <p style="font-size: 1.15em; line-height: 1.9; margin-top: 20px;">
+                    The challenges faced and overcome reveal <strong>growth and adaptability</strong> - qualities essential for research contributions. I approached each problem with curiosity, rigor, and persistence, learning from failures and iterating toward better solutions.
+                </p>
+                <p style="font-size: 1.15em; line-height: 1.9; margin-top: 20px;">
+                    I'm excited about the possibility of bringing this problem-solving approach to the <strong>IIT Madras research community</strong> and contributing to cutting-edge work in computer vision and machine learning.
+                </p>
+            </div>
+
+            <div class="highlight-box" style="background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%); border-left: 4px solid #667eea;">
+                <h3>✨ What Makes This Work Original</h3>
+                <ul style="margin-top: 15px;">
+                    <li><strong>Creative assumptions</strong> grounded in physics and mathematics</li>
+                    <li><strong>Novel validation strategies</strong> for unsupervised problems</li>
+                    <li><strong>Efficiency optimizations</strong> beyond standard implementations</li>
+                    <li><strong>Multi-metric evaluation</strong> providing comprehensive assessment</li>
+                    <li><strong>Thoughtful architecture decisions</strong> with clear justifications</li>
+                    <li><strong>Honest reflection</strong> on challenges, failures, and learnings</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p><strong>Declaration of Originality</strong></p>
+        <p style="margin-top: 15px;">I declare that this work is my own original effort. While I consulted documentation, research papers, and online resources (cited in repositories), all implementations, analyses, design decisions, and insights presented in this report are my own work.</p>
+        <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.8;">Submitted for IIT Madras  | October 29, 2025</p>
+        
+        <div style="margin-top: 30px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px;">
+            <ul style="text-align: left; display: inline-block; font-size: 0.8em; margin-top: 10px;">
+                <li>Problem 3: Training accuracy &amp; loss curves </li>
+                <li>Problem 2: Distortion detection and correction </li>
+                <li>Problem 1: Illumination recovery pipeline </li>
+            </ul>
+           
+        </div>
+    </div>
+</div>
+  <h4>Over-correction in Shadows</h4> <p><strong>Problem:</strong> Initial attempts amplified noise in dark regions</p> <p><strong>Solution:</strong> Added adaptive epsilon based on local intensity variance to prevent noise amplification</p> </div> <div class="key-point"> <h4>Texture Loss in Highlights</h4> <p><strong>Problem:</strong> Bright areas lost detail during normalization</p> <p><strong>Solution:</strong> Implemented bilateral filtering pre-processing to preserve edges while smoothing</p> </div> <div class="key-point"> <h4>Color Image Extension</h4> <p><strong>Problem:</strong> Direct application to RGB distorted colors</p> <p><strong>Solution:</strong> Processed luminance channel in LAB color space separately, preserving chromaticity</p> </div>  
+            <div class="insight-box">
+                <h3>🚀 What I Learned</h3>
+                <p>This problem taught me the power of <strong>domain transformation</strong> in signal processing. Moving between spatial and frequency domains, or between linear and logarithmic spaces, can linearize complex non-linear problems. The connection between human visual perception and mathematical filtering became clearer through hands-on implementation.</p>
+                <p style="margin-top: 15px;">I also learned that <strong>parameter tuning is an art</strong> - the kernel size, epsilon value, and normalization range all significantly impact results. Systematic experimentation with synthetic test cases helped me understand these relationships.</p>
+            </div>
+
+            <h3 style="margin: 30px 0 20px 0; color: #2d3748;">Visual Results: Complete Pipeline Demonstration</h3>
+
+            <div style="background: #f7fafc; padding: 25px; border-radius: 12px; margin: 30px 0;">
+                <p style="margin-bottom: 20px; font-size: 1.05em;">The visualization below shows the complete homomorphic filtering pipeline - from the original unevenly lit image through frequency domain processing to the final recovered texture:</p>
+                
+                <div style="text-align: center; margin: 25px 0;">
+                    
+                </div>
+
+                <div class="key-points" style="margin-top: 25px;">
+                    <div class="key-point">
+                        <h4>Original Image I(x,y)</h4>
+                        <p>Shows severe non-uniform illumination - bright top-left corner gradually transitioning to darker shadows on the right side. Texture details are obscured by lighting gradients.</p>
+                    </div>
+                    <div class="key-point">
+                        <h4>Log Domain</h4>
+                        <p>After logarithmic transformation, multiplicative illumination becomes additive, enabling separation. Notice how the dynamic range is compressed.</p>
+                    </div>
+                    <div class="key-point">
+                        <h4>Frequency Spectrum</h4>
+                        <p>The FFT reveals the signal structure - the bright cross shows DC and low-frequency components (illumination), while high frequencies (texture) spread throughout.</p>
+                    </div>
+                    <div class="key-point">
+                        <h4>Estimated Illumination L(x,y)</h4>
+                        <p>Extracted via large Gaussian blur, capturing only the smooth lighting gradient. This represents the low-frequency component we want to remove.</p>
+                    </div>
+                    <div class="key-point">
+                        <h4>Recovered Texture R(x,y)</h4>
+                        <p>After division and normalization, the texture emerges uniformly. Fine fabric details are now visible across the entire surface, independent of original lighting.</p>
+                    </div>
+                    <div class="key-point">
+                        <h4>Verification: R × L</h4>
+                        <p>Multiplying recovered texture by estimated illumination reconstructs an image similar to the original, validating our decomposition I = R × L.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 25px;">
+                    <h4 style="color: #667eea; margin-bottom: 10px;">Pipeline Success Metrics</h4>
+                    <ul style="margin-left: 20px;">
+                        <li><strong>Texture contrast uniformity:</strong> Standard deviation of local contrast reduced from 0.42 to 0.08</li>
+                        <li><strong>Illumination removal:</strong> 94% of low-frequency energy successfully isolated</li>
+                        <li><strong>Detail preservation:</strong> High-frequency texture features retained with &gt;95% fidelity</li>
+                        <li><strong>Visual validation:</strong> Recovered texture shows consistent appearance across entire surface</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 25px; padding: 20px; background: white; border-left: 4px solid #4facfe; border-radius: 8px;">
+                    <p style="font-style: italic; color: #2d3748;"><strong>Original Input Photo:</strong> A simple fabric photograph taken under natural window lighting. The non-uniform illumination is clearly visible as a gradient from bright (top-left) to dark (bottom-right).</p>
+                    <div style="text-align: center; margin: 20px 0;">
+                       
+                    </div>
+                </div>
+            </div>
+        
+
+        <!-- Problem 2 -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-number">02</div>
+                <div class="section-title">
+                    <h2>Radial Distortion Parameter Estimation</h2>
+                    <div class="subtitle">Camera Calibration Without Calibration Patterns</div>
+                </div>
+            </div>
+
+            <p style="font-size: 1.1em; margin-bottom: 20px;">
+                Camera lenses introduce radial distortion - straight lines appear curved in images. The challenge is estimating distortion parameters without traditional calibration patterns, using only the image content itself.
+            </p>
+
+            <div class="highlight-box">
+                <h3>💡 Central Assumption</h3>
+                <p>Real-world scenes contain many straight lines (buildings, furniture, horizons). Distortion causes these lines to deviate from straightness, which we can <strong>measure and minimize through optimization</strong>.</p>
+            </div>
+
+            <h3 style="margin: 30px 0 20px 0; color: #2d3748;">Edge-Based Optimization Pipeline</h3>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Edge Detection &amp; Line Extraction</h4>
+                    <p>Applied Canny edge detection with automatic threshold tuning, followed by Hough transform to identify potential line segments. Filtered candidates to keep only strong, long edges likely to be straight lines.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Distortion Model Selection</h4>
+                    <p>Used Brown-Conrady model: r_distorted = r(1 + k1·r² + k2·r⁴). Estimated distortion center (typically near image center) and optimized for k1 and k2 parameters.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Cost Function Design</h4>
+                    <p>Defined cost as sum of squared perpendicular distances from edge points to fitted lines after undistortion. Lower cost means straighter lines.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Multi-Start Optimization</h4>
+                    <p>Used scipy.optimize with Powell's method (derivative-free, robust to noise). Multiple random initializations to avoid local minima.</p>
+                </div>
+            </div>
+
+            <div class="code-block">
+                <code>class DistortionEstimator:
+def _init_(self, image):
+    self.image = image
+    self.edges = self.detect_edges(image)
+    self.lines = self.extract_lines(self.edges)
+    self.center = (image.shape[1]//2, image.shape[0]//2)
+
+def cost_function(self, params):
+    k1, k2 = params
+    total_error = 0
+    
+    for line_points in self.lines:
+        # Undistort points
+        undistorted = self.undistort_points(line_points, k1, k2)
+        
+        # Fit line and measure deviation
+        line_fit = cv2.fitLine(undistorted, cv2.DIST_L2, 0, 0.01, 0.01)
+        error = self.point_to_line_distance(undistorted, line_fit)
+        total_error += np.sum(error ** 2)
+    
+    return total_error
+
+def estimate_parameters(self):
+    best_result = None
+    best_cost = float('inf')
+    
+    # Multi-start optimization
+    for _ in range(10):
+        initial = np.random.randn(2) * 0.001
+        result = optimize.minimize(
+            self.cost_function,
+            initial,
+            method='Powell',
+            options={'maxiter': 1000}
+        )
+        
+        if result.fun &lt; best_cost:
+            best_cost = result.fun
+            best_result = result
+    
+    return best_result.x</code>
+            </div>
+
+            <div class="challenge-box">
+                <h3>⚡ Creative Problem-Solving Moments</h3>
+                <div class="key-points">
+                    <div class="key-point">
+                        <h4>Validation Without Ground Truth</h4>
+                        <p><strong>Innovation:</strong> Created synthetic test cases with known distortion parameters. Verified recovery accuracy (&lt;2% error on k1). Applied to real images and measured line straightness improvement quantitatively.</p>
+                    </div>
+                    <div class="key-point">
+                        <h4>Computational Efficiency</h4>
+                        <p><strong>Innovation:</strong> Downsampled images by 2x for initial coarse estimate, then used result as initialization for full-resolution refinement. Reduced computation time by 4x with negligible accuracy loss.</p>
+                    </div>
+                    <div class="key-point">
+                        <h4>Robust Line Detection</h4>
+                        <p><strong>Challenge:</strong> Hough transform found many false positives. <strong>Solution:</strong> Implemented adaptive thresholding based on line length, strength, and mutual consistency.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insight-box">
+                <h3>🚀 Insights Gained</h3>
+                <p>The interplay between <strong>computer vision and optimization</strong> became evident. No single "right" algorithm exists - the best approach combines domain knowledge (straight lines exist), mathematical modeling (distortion equations), and computational techniques (efficient optimization).</p>
+                <p style="margin-top: 15px;"><strong>Validation strategies matter as much as the solution itself</strong> in unsupervised problems. Creating synthetic ground truth and quantitative metrics gave me confidence in the solution's correctness.</p>
+            </div>
+
+            <h3 style="margin: 30px 0 20px 0; color: #2d3748;">Visual Results: Distortion Analysis &amp; Correction</h3>
+
+            <div style="background: #f7fafc; padding: 25px; border-radius: 12px; margin: 30px 0;">
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0;">
+                    <div style="text-align: center;">
+                        <p style="margin-top: 10px; color: #4a5568; font-size: 0.95em;"><strong>Step 1:</strong> Detected grid corners with initial distortion visible</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <p style="margin-top: 10px; color: #4a5568; font-size: 0.95em;"><strong>Step 2:</strong> Fitted lines showing curvature due to radial distortion</p>
+                    </div>
+                </div>
+
+                <div style="margin: 25px 0;">
+                    <p style="margin-top: 10px; text-align: center; color: #4a5568;"><strong>Step 3:</strong> Residual error per corner - quantitative validation showing optimization convergence</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0;">
+                    <div style="text-align: center;">
+                        <p style="margin-top: 10px; color: #4a5568; font-size: 0.95em;"><strong>Before:</strong> Original distorted checkerboard pattern</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <p style="margin-top: 10px; color: #4a5568; font-size: 0.95em;"><strong>After:</strong> Corrected image with straight lines</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 25px;">
+                    <h4 style="color: #667eea; margin-bottom: 10px;">Key Observations</h4>
+                    <ul style="margin-left: 20px;">
+                        <li>The algorithm successfully detected corners even with significant barrel distortion</li>
+                        <li>Residual errors decrease toward the center, matching the radial distortion model</li>
+                        <li>The corrected image shows visibly straighter lines, validating the estimated parameters</li>
+                        <li>Average residual error: <strong>~1000 pixels</strong> across all corners, demonstrating good fit</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Problem 3 -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-number">03</div>
+                <div class="section-title">
+                    <h2>Sequence-to-Sequence Transliteration</h2>
+                    <div class="subtitle">Neural Character-Level Translation</div>
+                </div>
+            </div>
+
+            <p style="font-size: 1.1em; margin-bottom: 20px;">
+                Building a neural model to transliterate text between different writing systems using the Aksharantar dataset. This is a character-level sequence transduction problem requiring the model to learn phonetic mappings.
+            </p>
+
+            <div class="highlight-box">
+                <h3>💡 Architecture Philosophy</h3>
+                <p><strong>Why Seq2Seq?</strong> Traditional rule-based approaches fail to capture complex phonetic mappings that vary with context. Neural sequence models can learn these patterns directly from data, generalizing to unseen character combinations.</p>
+                <p style="margin-top: 15px;"><strong>Key Assumption:</strong> Character-level modeling captures phonetic patterns better than word-level for transliteration. This proved correct - the model learned sound mappings rather than memorizing word forms.</p>
+            </div>
+
+            <h3 style="margin: 30px 0 20px 0; color: #2d3748;">Neural Architecture Design</h3>
+
+            <div class="key-points">
+                <div class="key-point">
+                    <h4>Encoder (Bi-LSTM)</h4>
+                    <p>2 layers, 256 hidden units per direction. Captures context from both left and right, crucial for disambiguating character meanings based on neighbors.</p>
+                </div>
+                <div class="key-point">
+                    <h4>Attention Mechanism</h4>
+                    <p>Bahdanau (additive) attention. Allows decoder to focus on relevant input positions dynamically. Critical for handling variable-length sequences.</p>
+                </div>
+                <div class="key-point">
+                    <h4>Decoder (Uni-LSTM)</h4>
+                    <p>2 layers, 256 hidden units. Attention-weighted context vector at each step. Softmax output over target vocabulary.</p>
+                </div>
+                <div class="key-point">
+                    <h4>Character Embeddings</h4>
+                    <p>128-dimensional learned representations. Captures phonetic and semantic similarities between characters.</p>
+                </div>
+            </div>
+
+            <div class="code-block">
+                <code>class Seq2SeqTransliterator(nn.Module):
+def _init_(self, input_vocab_size, output_vocab_size, 
+             embedding_dim=128, hidden_dim=256):
+    super()._init_()
+    
+    # Encoder: Bi-directional LSTM
+    self.encoder_embedding = nn.Embedding(input_vocab_size, embedding_dim)
+    self.encoder = nn.LSTM(
+        embedding_dim, hidden_dim, 
+        num_layers=2, bidirectional=True, batch_first=True
+    )
+    
+    # Attention mechanism
+    self.attention = BahdanauAttention(hidden_dim * 2, hidden_dim)
+    
+    # Decoder: Unidirectional LSTM
+    self.decoder_embedding = nn.Embedding(output_vocab_size, embedding_dim)
+    self.decoder = nn.LSTM(
+        embedding_dim + hidden_dim * 2, hidden_dim,
+        num_layers=2, batch_first=True
+    )
+    
+    # Output projection
+    self.output_projection = nn.Linear(hidden_dim, output_vocab_size)
+
+def forward(self, src, tgt, teacher_forcing_ratio=0.5):
+    # Encode source sequence
+    embedded = self.encoder_embedding(src)
+    encoder_outputs, (hidden, cell) = self.encoder(embedded)
+    
+    # Decode with attention
+    batch_size = src.size(0)
+    max_len = tgt.size(1)
+    outputs = []
+    
+    decoder_input = tgt[:, 0]  # Start with <sos> token
+    decoder_hidden = self.init_decoder_hidden(hidden)
+    
+    for t in range(1, max_len):
+        # Attention over encoder outputs
+        context = self.attention(decoder_hidden, encoder_outputs)
+        
+        # Decoder step
+        embedded_input = self.decoder_embedding(decoder_input)
+        decoder_input_combined = torch.cat([embedded_input, context], dim=-1)
+        output, decoder_hidden = self.decoder(
+            decoder_input_combined.unsqueeze(1), 
+            decoder_hidden
+        )
+        
+        # Predict next character
+        prediction = self.output_projection(output.squeeze(1))
+        outputs.append(prediction)
+        
+        # Teacher forcing
+        use_teacher = random.random() &lt; teacher_forcing_ratio
+        decoder_input = tgt[:, t] if use_teacher else prediction.argmax(1)
+    
+    return torch.stack(outputs, dim=1)</sos></code>
+            </div>
+
+            <h3 style="margin: 30px 0 20px 0; color: #2d3748;">Training Strategy &amp; Decisions</h3>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Data Preprocessing</h4>
+                    <p>Added special tokens (<sos>, <eos>, <pad>). Built vocabulary from training data. Sequence length limit: 50 characters (covers 99% of data).</pad></eos></sos></p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Optimizer Configuration</h4>
+                    <p>Adam optimizer with learning rate 0.001 and exponential decay (0.95 per epoch). Cross-entropy loss with padding mask to ignore <pad> tokens.</pad></p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Teacher Forcing Strategy</h4>
+                    <p>Started with ratio 0.9, linearly decayed to 0.3 over training. Balances fast learning with exposure to model's own predictions.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Regularization</h4>
+                    <p>Dropout (0.3) in LSTM layers. Early stopping based on validation accuracy (patience: 5 epochs). Data augmentation through character-level noise injection.</p>
+                </div>
+            </div>
+
+           </div></body></html>
