@@ -61,11 +61,18 @@ $$\mathbf{\text{Total Computations} \approx 4T \cdot (E \cdot H + H^2 + H \cdot 
 ---
 
 ## 3. Project Structure
+The project follows good software engineering practices with a modular and scalable file structure, visualized below:
 
-The project follows good software engineering practices with a modular file structure:
-'''
-aksharantar-seq2seq/ ├── data/ # Location for the extracted Aksharantar dataset sample ├── models/ # Saved model checkpoints ├── main.py # Main execution script, training loop, and evaluation ├── utils.py # Data preparation, tokenization, and custom DataLoader logic ├── encoder.py # Defines the configurable RNN Encoder (supports RNN, LSTM, GRU) ├── decoder.py # Defines the configurable RNN Decoder (supports RNN, LSTM, GRU) ├── model.py # Seq2Seq wrapper integrating Encoder and Decoder └── requirements.txt # Project dependencies (PyTorch, numpy, etc.)
-'''
+aksharantar-seq2seq/
+├── data/
+│   └── aksharantar_sampled/  # Extracted Aksharantar dataset files
+├── models/                   # Saved model checkpoints and artifacts
+├── main.py                   # Main execution script, training loop, and evaluation
+├── utils.py                  # Data loading, preprocessing, tokenization, and custom DataLoader logic
+├── encoder.py                # Defines the configurable RNN Encoder (supports RNN, LSTM, GRU)
+├── decoder.py                # Defines the configurable RNN Decoder (supports RNN, LSTM, GRU)
+├── model.py                  # Seq2Seq wrapper integrating Encoder and Decoder
+└── requirements.txt          # Project dependencies (PyTorch, numpy, etc.)
 ## 4. Execution
 
 ### Prerequisites
