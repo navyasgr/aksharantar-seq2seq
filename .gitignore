@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints
+
+# Logs and results
+results/
+logs/
+checkpoints/
+
+# Datasets
+data/aksharantar_sampled/
+*.csv
+*.zip
+
+# OS / Editor
+.DS_Store
+.vscode/
+.idea/
