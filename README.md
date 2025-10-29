@@ -74,7 +74,7 @@ aksharantar-seq2seq/
 ├── decoder.py                       
 ├── model.py                          
 └── requirements.txt                  
-'''
+
 ## 4. Execution
 
 ### Prerequisites
